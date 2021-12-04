@@ -1,4 +1,3 @@
-alert("Welcome to the Game!);
 var colorRep = ["red","blue","green","yellow"];
 
 var gamePattern = [];
