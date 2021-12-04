@@ -42,6 +42,7 @@ function checkAnswer(name)
     console.log("wrong!");
     wrongFun();
     randomButton();
+    $("h1").text("");
   }
 }
 
@@ -53,10 +54,13 @@ function wrongFun()
 
     setTimeout(()=>{
       $("body").removeClass("game-over");  
-      alert("Your score: "+(level-1)+"\nStart Again...!");
+      
       level=1;
-      $("h1").text("Level "+level);
-    },200);
+      var temp = level;
+      alert("Your score: "+(level-1)+"\nStart Again...!");
+      
+      $("h1").text("Level "+temp);
+    },100);
 
 }
 
@@ -89,7 +93,7 @@ function animateButton(name){
 
   setTimeout(()=>{
     $("#"+name).removeClass("pressed");
-  },100);
+  },200);
 }
 
 function playSound(name){
